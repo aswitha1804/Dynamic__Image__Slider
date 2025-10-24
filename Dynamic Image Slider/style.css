@@ -1,0 +1,302 @@
+body {
+  font-family: 'Georgia', serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f0e6;
+  color: #2c2c2c;
+  text-align: center;
+}
+
+header {
+  background: #3b2f2f;
+  color: #fff;
+  padding: 20px 0;
+  border-bottom: 5px solid #b08b4f;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo img {
+  height: 80px;
+  border: 3px solid #b08b4f;
+  border-radius: 8px;
+  background: #fff;
+  padding: 5px;
+}
+
+.heading {
+  font-family: 'Times New Roman', serif;
+  font-size: 2.2rem;
+  margin: 10px 0 0;
+  color: #f8e8c8;
+  text-shadow: 1px 1px 2px #000;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: #f8e8c8;
+  margin: 0 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+nav a:hover {
+  color: #b08b4f;
+  border-bottom: 2px solid #b08b4f;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+}
+
+main h2 {
+  font-family: 'Times New Roman', serif;
+  font-size: 2rem;
+  color: #3b2f2f;
+  border-bottom: 4px solid #b08b4f;
+  display: inline-block;
+  padding: 10px 20px;
+  margin-bottom: 30px;
+  border-radius: 6px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Slider */
+.slider {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  margin: 30px auto;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 3px solid #b08b4f;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease-in-out;
+}
+
+.slides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 8px;
+}
+.slide-item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.slide-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.caption {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(59,47,47,0.7); /* semi-transparent background */
+  color: #f8e8c8;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #000;
+}
+
+
+/* Buttons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(59,47,47,0.8);
+  color: #f8e8c8;
+  border: 2px solid #b08b4f;
+  padding: 14px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 1.2rem;
+}
+
+.prev:hover, .next:hover {
+  background: #b08b4f;
+  color: #fff;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+/* Dots */
+.dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 100;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  background-color: #b08b4f;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dot.active {
+  background-color: #3b2f2f;
+}
+
+/* Footer */
+footer {
+  background: #3b2f2f;
+  color: #f8e8c8;
+  padding: 15px;
+  border-top: 4px solid #b08b4f;
+  font-family: 'Times New Roman', serif;
+}
+.about-intro, .about-features, .about-conclusion {
+  max-width: 800px;
+  margin: 30px auto;
+  text-align: center;
+  padding: 20px;
+  background: #fff8f0;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.about-intro h2, .about-features h2, .about-conclusion h2 {
+  font-family: 'Times New Roman', serif;
+  font-size: 2rem;
+  color: #3b2f2f;
+  margin-bottom: 15px;
+  border-bottom: 3px solid #b08b4f;
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+.about-features ul {
+  list-style: disc inside;
+  text-align: left;
+  margin: 15px 0;
+  color: #3b2f2f;
+  font-weight: bold;
+}
+
+.feature-images {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.feature-images img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #b08b4f;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column; /* stack fields vertically */
+  max-width: 450px;
+  margin: 30px auto;
+  padding: 25px;
+  background: #fff8f0;
+  border: 2px solid #b08b4f;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.contact-form label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #3b2f2f;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #b08b4f;
+  border-radius: 6px;
+  width: 100%;
+  font-family: 'Georgia', serif;
+}
+
+.contact-form button {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  background: #3b2f2f;
+  color: #f8e8c8;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.contact-form button:hover {
+  background: #b08b4f;
+  color: white;
+}
+footer {
+  background: #3b2f2f;
+  color: #f8e8c8;
+  padding: 20px;
+  border-top: 4px solid #b08b4f;
+  font-family: 'Times New Roman', serif;
+  text-align: center;
+  margin-top: 40px;
+}
+
+footer p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+}
+
+footer a {
+  color: #f8e8c8;
+  text-decoration: none;
+  margin: 0 5px;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #b08b4f;
+  text-decoration: underline;
+}
+
+footer nav a {
+  font-weight: bold;
+}
+
+
